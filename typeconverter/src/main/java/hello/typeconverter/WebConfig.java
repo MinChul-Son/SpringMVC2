@@ -14,9 +14,8 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addConverter(new StringToIntegerConverter());
-//        registry.addConverter(new StringToIpPortConverter());
+        registry.addConverter(new StringToIpPortConverter());
         registry.addConverter(new IntegerToStringConverter());
-
         registry.addConverter(new IpPortToStringConverter());
     }
 }
